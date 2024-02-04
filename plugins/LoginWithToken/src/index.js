@@ -28,6 +28,7 @@ export default {
             {
               name: "token",
               description: "The token to login into",
+              displayName: "token",
               type: 3,
               required: true,
             },
