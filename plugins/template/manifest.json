@@ -1,14 +1,14 @@
 {
-    "name": "Template Plugin",
-    "description": "A plugin for use as a template.",
+    "name": "Login with Token",
+    "description": "Adds a login command for logging in with a Discord Token",
     "authors": [
         {
-            "name": "You!",
-            "id": "YOUR_ID_HERE"
+            "name": "Dogatorix",
+            "id": "728394648174723192"
         }
     ],
-    "main": "src/index.ts",
+    "main": "src/index.js",
     "vendetta": {
-        "icon": "ic_badge_staff"
+        "icon": "ic_full_server_gating_24px"
     }
 }
