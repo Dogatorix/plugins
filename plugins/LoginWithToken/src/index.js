@@ -10,6 +10,7 @@ export default {
       [
         {
           name: "login",
+          displayName: "login",
           description: "Login with token",
           type: 1,
           inputType: 1,
