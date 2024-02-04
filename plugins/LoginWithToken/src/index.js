@@ -11,6 +11,9 @@ export default {
         {
           name: "login",
           description: "Login with token",
+          type: 1,
+          inputType: 1,
+          applicationId: "-1",
           execute: async (args) => {
             const options = new Map(args.map((arg) => [a.name, a]));
             const token = options.get("token").value;
@@ -22,9 +25,6 @@ export default {
           },
           options: [
             {
-              type: 1,
-              inputType: 1,
-              applicationId: "-1",
               name: "token",
               description: "The token to login into",
               type: 3,
