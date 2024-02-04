@@ -4,7 +4,6 @@ import { findByStoreName, findByProps } from "@vendetta/metro";
 
 export default {
   meta: vendetta.plugin,
-  patches: [],
   onLoad: () => {
     logger.log("Loaded 'Login with Token' plugin.");
     try {
@@ -30,15 +29,13 @@ export default {
             },
           ],
         },
-      ].forEach((command) => this.patches.push(registerCommand(command)));
+      ].forEach((command) => registerCommand(command));
     } catch (e) {
       console.error(e);
       alert("There was an error while loading 'Login with Token'\n" + e.stack);
     }
   },
   onUnload: () => {
-    logger.log("Unloaded 'Login with Token' plugin.");
-    this.patches.forEach((unregister) => unregister());
-    this.patches = [];
+
   },
 };
