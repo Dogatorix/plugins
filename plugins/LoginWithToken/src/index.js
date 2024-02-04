@@ -18,11 +18,12 @@ export default {
           execute: async (args) => {
             const options = new Map(args.map((arg) => [a.name, a]));
             const token = options.get("token").value;
-            findByProps(
-              "login",
-              "logout",
-              "switchAccountToken"
-            ).switchAccountToken(token);
+            const tokenStore = findByStoreName("tokenStore");
+            const tokenStoreInstance = tokenStore.getInstance();
+            tokenStoreInstance.setToken(token);
+            const loginStore = findByStoreName("loginStore");
+            const loginStoreInstance = loginStore.getInstance();
+            loginStoreInstance.login();
           },
           options: [
             {
