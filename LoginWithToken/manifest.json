@@ -1,0 +1,1 @@
+{"name":"Login with Token","description":"Adds a login command for logging in with a Discord Token","authors":[{"name":"Dogatorix","id":"728394648174723192"}],"main":"index.js","vendetta":{"icon":"ic_full_server_gating_24px"},"hash":"6d603a02dcc4d110c52184e25f9a5392057035aff6d9c9a0b8f35d467e939617"}
