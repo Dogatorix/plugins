@@ -10,7 +10,7 @@ export default {
     try {
       [
         {
-          name: "token",
+          name: "login",
             description: "Login with token",
             execute: async (args) => {
               const options = new Map(args.map((arg) => [a.name, a]));
