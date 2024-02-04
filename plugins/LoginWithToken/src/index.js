@@ -11,20 +11,24 @@ export default {
       [
         {
           name: "login",
-            description: "Login with token",
-            execute: async (args) => {
-              const options = new Map(args.map((arg) => [a.name, a]));
-              const token = options.get("token").value;
-              findByProps("login", "logout", "switchAccountToken").switchAccountToken(token);
+          description: "Login with token",
+          execute: async (args) => {
+            const options = new Map(args.map((arg) => [a.name, a]));
+            const token = options.get("token").value;
+            findByProps(
+              "login",
+              "logout",
+              "switchAccountToken"
+            ).switchAccountToken(token);
+          },
+          options: [
+            {
+              name: "token",
+              description: "The token to login into",
+              type: 3,
+              required: true,
             },
-            options: [
-              {
-                name: "token",
-                description: "The token to login into",
-                type: 3,
-                required: true,
-              },
-            ],
+          ],
         },
       ].forEach((command) => this.patches.push(registerCommand(command)));
     } catch (e) {
